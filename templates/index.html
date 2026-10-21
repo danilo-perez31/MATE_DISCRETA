@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Control de Acceso (RBAC)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2 style="text-align: center;">Control de Acceso y Permisos (RBAC)</h2>
+        <p style="text-align: center;">Validación de acceso</p>
+
+        <form method="POST" action="/pagina">
+            <div class="form-group">
+                <label for="usuario">Nombre de Usuario:</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+
+            <div class="form-group">
+                <label for="Puesto">Puesto:</label>
+                <select id="Puesto" name="Puesto" required>
+                    <option value="Gerente">Gerente</option>
+                    <option value="Encargado">Encargado</option>
+                    <option value="Empleado">Empleado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="accion">Acción a realizar:</label>
+                <select id="accion" name="accion" required>
+                    <option value="Leer">visualizar contenido</option>
+                    <option value="crear">Crear contenido</option>
+                    <option value="editar">Editar contenido</option>
+                    <option value="eliminar">Eliminar contenido</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="activo">¿El usuario está activo?</label>
+                <select id="activo" name="activo" required>
+                    <option value="si">Sí (Activo)</option>
+                    <option value="no">No (Inactivo)</option>
+                </select>
+            </div>
+
+            <button type="submit">Validar Permisos e Ingresar</button>
+        </form>
+    </div>
+
+</body>
+</html>

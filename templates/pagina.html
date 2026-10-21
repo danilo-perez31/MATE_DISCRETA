@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Proyecto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container-pagina">
+        <h1 style="text-align: center;">Lógica Proposicional</h1></div>
+
+<p>
+1. Introducción a la Lógica Proposicional<br><br>
+La lógica proposicional es la rama de la lógica matemática que estudia las proposiciones y la forma en que se combinan mediante conectivos lógicos para construir razonamientos válidos. Es la base fundamental para el diseño de circuitos digitales, algoritmos y sistemas de control en computación.<br><br>
+
+1.1. Proposiciones Simples y Compuestas<br><br>
+• Proposición Simple: Es una enunciación o declaración que puede tomar únicamente un valor de verdad: Verdadero (V o 1) o Falso (F o 0), pero no ambos a la vez.<br>
+Ejemplo: p = "El usuario está activo"<br><br>
+• Proposición Compuesta: Es la unión de dos o más proposiciones simples mediante conectivos lógicos.<br>
+Ejemplo: p ∧ q = "El usuario está activo Y tiene permiso de acceso"<br><br>
+
+1.2. Conectivos Lógicos Fundamentales<br><br>
+Los conectivos lógicos son operadores que permiten evaluar condiciones booleanas dentro de un programa:<br><br>
+• Negación (NOT / ¬): Invierte el valor de verdad de una proposición. Si p es Verdadero, ¬p es Falso.<br><br>
+• Conjunción (AND / ∧): La condición final es Verdadera ÚNICAMENTE si ambas proposiciones son Verdaderas.<br>
+(En Python se evalúa mediante la palabra reservada 'and').<br><br>
+• Disyunción Inclusiva (OR / ∨): La condición final es Verdadera si al menos una de las proposiciones es Verdadera.<br>
+(En Python se evalúa mediante la palabra reservada 'or').<br><br>
+• Condicional (Implicación / →): Indica que si se cumple la hipótesis (p), entonces se debe cumplir la conclusión (q). Solo es Falsa si la hipótesis es Verdadera y la conclusión es Falsa.<br><br>
+• Bicondicional (Doble Implicación / ↔): La condición es Verdadera únicamente si ambas proposiciones tienen el mismo valor de verdad (ambas Verdaderas o ambas Falsas).<br><br>
+
+2. Tablas de Verdad<br><br>
+Una tabla de verdad representa todas las posibles combinaciones de valores de verdad que pueden tomar las proposiciones simples de una expresión lógica para determinar su resultado final.<br><br>
+
+2.1. Clasificación de las Fórmulas Lógicas<br><br>
+• Tautología: Ocurre cuando el resultado final de la tabla de verdad es Verdadero en todos los casos posibles.<br><br>
+• Contradicción: Ocurre cuando el resultado final de la tabla de verdad es Falso en todos los casos posibles.<br><br>
+• Contingencia: Ocurre cuando el resultado final de la tabla combina casos Verdaderos y Falsos según las entradas.<br><br>
+
+3. Aplicaciones en Ciencias de la Computación<br><br>
+La lógica proposicional es un pilar imprescindible en el desarrollo de software:<br><br>
+• Sentencias de Control de Flujo: Estructuras condicionales como 'if', 'else' y 'while' dependen directamente de expresiones booleanas (AND, OR, NOT).<br><br>
+• Validación de Permisos y Seguridad (RBAC): Evaluación de reglas complejas donde el acceso se otorga bajo condiciones booleanas específicas (ejemplo: acceso = tiene_permiso AND esta_activo).<br><br>
+• Circuitos Lógicos: Diseño de compuertas informáticas básicas (AND, OR, NOT, XOR) a nivel de hardware.
+</p>
+
+        <br>
+    <div class="container-pagina">
+        <h1 style="text-align: center;">Conjuntos y Relaciones</h1></div>
+        
+
+<p>
+1. Teoría de Conjuntos<br><br>
+Un conjunto es una colección bien definida de objetos distintos, a los cuales se les denomina elementos o miembros del conjunto. En matemáticas y computación, los conjuntos representan la base lógica para estructurar datos, clasificar elementos y definir agrupaciones.<br><br>
+
+1.1. Formas de Determinación de Conjuntos<br><br>
+• Por Extensión (o Tabulación): Se enumeran todos y cada uno de los elementos entre llaves.<br>
+Ejemplo: A = {1, 2, 3, 4, 5}<br><br>
+• Por Comprensión: Se indica una propiedad o condición lógica que cumplen únicamente sus elementos.<br>
+Ejemplo: A = {x | x es un número entero positivo menor o igual a 5}<br><br>
+
+1.2. Operaciones Fundamentales entre Conjuntos<br><br>
+Las operaciones entre conjuntos permiten combinar o comparar agrupaciones para generar nuevos conjuntos de datos:<br><br>
+• Unión (A ∪ B): Conjunto formado por todos los elementos que pertenecen a A, a B o a ambos.<br><br>
+• Intersección (A ∩ B): Conjunto formado únicamente por los elementos comunes que pertenecen simultáneamente tanto a A como a B. (Esta es la operación clave que utiliza la función set.intersection() en programación para evaluar coincidencias y permisos).<br><br>
+• Diferencia (A − B): Conjunto de elementos que pertenecen únicamente a A, pero no forman parte de B.<br><br>
+• Diferencia Simétrica (A Δ B): Conjunto de elementos que pertenecen a A o a B, pero no a ambos al mismo tiempo.<br><br>
+• Complemento (A' o A<sup>c</sup>): Conjunto de todos los elementos del universo de referencia que no pertenecen al conjunto A.<br><br>
+
+2. Relaciones Matemáticas<br><br>
+Dados dos conjuntos A y B, el Producto Cartesiano (A × B) es el conjunto de todos los pares ordenados (a, b) donde el primer elemento 'a' pertenece a A y el segundo elemento 'b' pertenece a B.<br><br>
+Una Relación (R) de A en B es cualquier subconjunto del producto cartesiano (R ⊆ A × B). Establece un vínculo, regla o correspondencia lógica entre los elementos del primer conjunto (Dominio) y los elementos del segundo conjunto (Codominio o Rango).<br><br>
+
+2.1. Propiedades de las Relaciones en un Conjunto<br><br>
+Una relación R definida sobre un conjunto A puede cumplir con las siguientes propiedades fundamentales:<br><br>
+• Reflexiva: Todo elemento está relacionado consigo mismo. Para todo a ∈ A, se cumple que (a, a) ∈ R.<br><br>
+• Irreflexiva: Ningún elemento está relacionado consigo mismo. Para todo a ∈ A, se cumple que (a, a) ∉ R.<br><br>
+• Simétrica: Si un elemento 'a' está relacionado con 'b', entonces 'b' está relacionado con 'a'. Si (a, b) ∈ R, entonces (b, a) ∈ R.<br><br>
+• Antisimétrica: Si (a, b) ∈ R y (b, a) ∈ R, la única forma de que ambas ocurran es que a = b.<br><br>
+• Transitiva: Si 'a' está relacionado con 'b' y 'b' está relacionado con 'c', entonces 'a' está relacionado con 'c'. Si (a, b) ∈ R y (b, c) ∈ R, entonces (a, c) ∈ R.<br><br>
+
+2.2. Tipos Especiales de Relaciones<br><br>
+• Relación de Equivalencia: Es aquella relación que cumple simultáneamente con ser Reflexiva, Simétrica y Transitiva. Se utiliza para agrupar y clasificar elementos en clases de equivalencia.<br><br>
+• Relación de Orden Parcial: Es aquella relación que cumple con ser Reflexiva, Antisimétrica y Transitiva. Permite establecer jerarquías u ordenamientos entre los elementos de un sistema.<br><br>
+
+3. Aplicaciones en Ciencias de la Computación<br><br>
+La teoría de conjuntos y relaciones constituye el pilar matemático para múltiples áreas de la informática:<br><br>
+• Bases de Datos Relacionales (SQL): Las tablas se tratan como relaciones matemáticas. Operaciones de consulta como JOIN, UNION e INTERSECT se derivan directamente del álgebra de conjuntos.<br><br>
+• Sistemas de Control de Acceso (RBAC): Crean correspondencias entre el conjunto de Roles (Admin, Encargado, Empleado) y el conjunto de Permisos (Leer, Crear, Editar, Eliminar) evaluando la pertenencia e intersección de conjuntos para garantizar la seguridad.<br><br>
+• Estructuras de Datos y Algoritmos: El manejo de listas, arreglos, conjuntos hash y la teoría de grafos se fundamenta en la manipulación de pares ordenados y nodos relacionados.
+</p>
+
+<br>
+<a href="/">← Volver al inicio</a>
+</div>
